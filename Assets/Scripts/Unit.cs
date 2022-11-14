@@ -22,11 +22,14 @@ public abstract class Unit : MonoBehaviour,
         m_Agent.speed = Speed;
         m_Agent.acceleration = 999;
         m_Agent.angularSpeed = 999;
+
+       
     }
 
     private void Start()
     {
-
+        if(MainManager.instance != null)
+           SetColor(MainManager.instance.color);
     }
 
     void SetColor(Color c)
